@@ -74,21 +74,16 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+b split h
+bindsym $mod+Shift+backslash split h
 
 # split in vertical orientation
-bindsym $mod+v split v
-
-# toggle split orientation
-bindsym $mod+t split toggle
+bindsym $mod+Shift+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-# bindsym $mod+s layout stacking
-# bindsym $mod+w layout tabbed
-# bindsym $mod+e layout toggle split
+bindsym $mod+t layout tabbed
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -106,11 +101,11 @@ bindsym $mod+a focus parent
 bindsym $mod+s focus child
 
 # move the currently focused window to the scratchpad
-bindsym $mod+Shift+minus move scratchpad
+# bindsym $mod+Shift+plus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+minus scratchpad show
+# bindsym $mod+plus scratchpad show
 
 # switch to workspace
 bindsym $mod+1 workspace 1: main 
@@ -136,16 +131,41 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
-# reload the configuration file
-bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-# lock i3
-bindsym $mod+Shift+Escape exec i3lock
-
 # binding modes
+# i3 session management
+set $mode_i3_session "i3 session: inplace [r]estart, reload [c]onfig"
+mode $mode_i3_session {
+        # reload the configuration file
+        bindsym c reload
+        # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+        bindsym r restart
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+grave mode $mode_i3_session
+
+# system session management
+set $mode_system_session "system session: [e]xit, [l]ock, [r]eboot, [p]oweroff"
+mode $mode_system_session {
+        # exit i3 (logs you out of your X session)
+        bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+        # lock the display manager
+        bindsym l exec dm-tool lock
+        # restart
+        bindsym r exec systemctl reboot
+        # shutdown
+        bindsym p exec systemctl poweroff
+
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+Escape mode $mode_system_session
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
