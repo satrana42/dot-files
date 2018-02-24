@@ -1,11 +1,11 @@
 # zsh configuration
-export ZSH=/home/satwant/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="ys"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git)
+plugins=(git, vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
