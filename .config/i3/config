@@ -152,8 +152,8 @@ set $mode_system_session "system session: [e]xit, [l]ock, [r]eboot, [p]oweroff"
 mode $mode_system_session {
         # exit i3 (logs you out of your X session)
         bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-        # lock the display manager
-        bindsym l exec dm-tool lock
+        # lock gnome 
+        bindsym l exec gnome-screensaver-command -l
         # restart
         bindsym r exec systemctl reboot
         # shutdown
