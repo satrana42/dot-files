@@ -5,7 +5,7 @@ ZSH_THEME="ys"
 
 HIST_STAMPS="dd/mm/yyyy"
 
-plugins=(git, vi-mode, ssh-agent)
+plugins=(git vi-mode ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
