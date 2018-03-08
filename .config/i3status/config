@@ -4,18 +4,18 @@ general {
         interval = 5
 }
 
-order += "ipv6"
-order += "disk /"
-order += "run_watch DHCP"
 order += "run_watch VPNC"
 order += "path_exists VPN"
+order += "ipv6"
+order += "run_watch DHCP"
 order += "wireless wlan0"
 order += "ethernet eth0"
-order += "battery 0"
-order += "cpu_temperature 0"
+order += "disk /"
 order += "load"
-order += "tztime local"
+order += "cpu_temperature 0"
 order += "tztime la"
+order += "tztime local"
+order += "battery 0"
 
 wireless wlan0 {
         format_up = "W: (%quality at %essid, %bitrate) %ip"
@@ -29,7 +29,7 @@ ethernet eth0 {
 }
 
 battery 0 {
-        format = "%status %percentage %remaining %emptytime"
+        format = "%status %percentage %remaining"
         format_down = "No battery"
         status_chr = "⚡ CHR"
         status_bat = "🔋 BAT"
@@ -59,11 +59,11 @@ tztime local {
 
 tztime la {
         format = "%Y-%m-%d %H:%M:%S %Z"
-        timezone = "America/Lost_Angeles"
+        timezone = "America/Los_Angeles"
 }
 
 load {
-        format = "%5min"
+        format = "L: %5min"
 }
 
 cpu_temperature 0 {
@@ -72,5 +72,5 @@ cpu_temperature 0 {
 }
 
 disk "/" {
-        format = "%free"
+        format = "%free free"
 }
