@@ -92,10 +92,14 @@ bindsym $mod+s focus child
 # bindsym $mod+plus scratchpad show
 
 # switch to workspace
-bindsym $mod+1 workspace 1: main 
-bindsym $mod+2 workspace 2: term
-bindsym $mod+3 workspace 3: web
-bindsym $mod+4 workspace 4: aux
+set $ws_main "1: main"
+set $ws_term "2: term"
+set $ws_web "3: web"
+set $ws_aux "4: aux"
+bindsym $mod+1 workspace $ws_main
+bindsym $mod+2 workspace $ws_term
+bindsym $mod+3 workspace $ws_web
+bindsym $mod+4 workspace $ws_aux
 bindsym $mod+5 workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
@@ -104,10 +108,10 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+1 move container to workspace $ws_main
+bindsym $mod+Shift+2 move container to workspace $ws_term
+bindsym $mod+Shift+3 move container to workspace $ws_web
+bindsym $mod+Shift+4 move container to workspace $ws_aux
 bindsym $mod+Shift+5 move container to workspace 5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
