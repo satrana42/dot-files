@@ -9,6 +9,12 @@ alias sudo='sudo '
 export VISUAL=vim
 export EDITOR='$VISUAL'
 
-# fasd stuff
+# fasd (file search)
 eval "$(fasd --init auto)"
 alias v='f -e vim'
+
+# fzf (history search)
+case $CURRENT_SHELL in
+  "zsh") [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh;;
+  "bash") [ -f ~/.fzf.bash ] && source ~/.fzf.bash;;
+esac

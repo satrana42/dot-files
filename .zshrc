@@ -1,3 +1,6 @@
+# return if not in interactive mode
+[[ $- != *i* ]] && return
+
 # zsh configuration
 export ZSH=~/.oh-my-zsh
 
@@ -9,12 +12,5 @@ plugins=(git vi-mode ssh-agent)
 
 source $ZSH/oh-my-zsh.sh
 
-# user configuration
-# ssh
-export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-# fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# custom additions
-source ~/.shell_additions.sh
+# common shell additions
+export CURRENT_SHELL="zsh"; source ~/.shell_additions.sh

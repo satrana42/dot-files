@@ -1,4 +1,5 @@
-# custom additions
-source ~/.shell_additions.sh
+# return if not in interactive mode
+[[ $- != *i* ]] && return
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# common shell additions
+export CURRENT_SHELL="bash"; source ~/.shell_additions.sh
