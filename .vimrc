@@ -22,6 +22,11 @@ endif
 call vundle#end()
 filetype plugin indent on
 
+" ctrlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
 " incsearch
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
@@ -49,6 +54,10 @@ set number
 
 " line length marker
 set colorcolumn=80
+
+" splits
+nnoremap <C-w>_ :split<CR>
+nnoremap <C-w>\| :vsplit<CR>
 
 " theme
 colorscheme seoul256
