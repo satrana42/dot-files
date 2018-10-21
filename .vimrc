@@ -23,6 +23,7 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
+Plugin 'neoclide/coc.nvim'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
 
@@ -68,6 +69,7 @@ let g:tagbar_autoclose=2
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_max_files = 200000
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -109,3 +111,6 @@ set smartindent
 autocmd VimResized * wincmd =
 nnoremap <C-w>_ :split<CR>
 nnoremap <C-w>\| :vsplit<CR>
+
+" current buffer diff
+command DiffOriginal w !diff % -
