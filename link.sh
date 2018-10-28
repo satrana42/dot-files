@@ -14,6 +14,7 @@ DOT_FILES=( \
 .config/locale.conf \
 .config/systemd/user/geoclue-agent.service \
 .ctags \
+.gitconfig \
 .inputrc \
 .shell_additions.sh \
 .tmux.conf \

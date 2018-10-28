@@ -1,0 +1,12 @@
+[user]
+	email = satwant.rana@rubrik.com
+	name = Satwant Rana
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	dt = difftool
+	clog = log --format=fuller
+[pager]
+	branch = false
