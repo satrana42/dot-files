@@ -26,6 +26,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'neoclide/coc.nvim'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
+Plugin 'rickhowe/diffchar.vim'
 
 if v:version > 704
   Plugin 'Valloric/YouCompleteMe'
