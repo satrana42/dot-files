@@ -18,3 +18,6 @@ case $CURRENT_SHELL in
   "zsh") [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh;;
   "bash") [ -f ~/.fzf.bash ] && source ~/.fzf.bash;;
 esac
+
+# xdg config directoru
+export XDG_CONFIG_HOME=~/.config

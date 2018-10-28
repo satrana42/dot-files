@@ -23,13 +23,13 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-Plugin 'neoclide/coc.nvim'
+" Plugin 'neoclide/coc.nvim'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
 
-if v:version > 704
-  Plugin 'Valloric/YouCompleteMe'
-endif
+" if v:version > 704
+"   Plugin 'Valloric/YouCompleteMe'
+" endif
 
 call vundle#end()
 filetype plugin indent on

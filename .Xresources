@@ -1,0 +1,10 @@
+!! URxvt settings
+!! Appearance
+urxvt.termName: rxvt-unicode
+urxvt.scrollBar: false
+!! Font prefferenes
+urxvt.font: xft:Noto Sans Mono:pixelsize=13
+urxvt.boldFont: xft:Noto Sans Mono:pixelsize=13:weight=bold
+urxvt.letterSpace: -1
+!! Larger history limit
+urxvt.saveLines: 0
