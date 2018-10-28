@@ -193,26 +193,14 @@ bar {
 }
 
 # start up apps
-# enable natural scrolling
-exec ~/codes/i3-natural-scrolling-and-tap/inverse-scroll.sh
-
-# enable tap to click
-exec ~/codes/i3-natural-scrolling-and-tap/tap-to-click.sh 
-
 # set wallpaper
 exec sh ~/.fehbg
 
 # start cerebro
-exec --no-startup-id cerebro
+exec cerebro
 
 # start redshift
-exec --no-startup-id redshift
-
-# start network manager applet
-exec --no-startup-id nm-applet
-
-# start volumeicon applet
-exec --no-startup-id volumeicon
+exec redshift-gtk
 
 # start compton
 exec compton
