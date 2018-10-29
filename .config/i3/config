@@ -119,6 +119,12 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# i3 gaps
+gaps inner 5
+gaps outer 5
+smart_gaps on
+smart_borders on
+
 # binding modes
 # i3 session management
 set $mode_i3_session "i3 session: inplace [r]estart, reload [c]onfig"
@@ -141,7 +147,7 @@ mode $mode_system_session {
         # exit i3 (logs you out of your X session)
         bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"; mode "default"
         # lock gnome 
-        bindsym l exec i3lock; mode "default"
+        bindsym l exec i3lock -e -c 000000; mode "default"
         # restart
         bindsym r exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot the system? This will end all running processes.' -b 'Yes, reboot' 'systemctl reboot'"; mode "default"
         # shutdown
@@ -155,7 +161,8 @@ mode $mode_system_session {
 bindsym $mod+Escape mode $mode_system_session
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+set $mode_resize "resize"
+mode $mode_resize {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -178,7 +185,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode $mode_resize
 
 # mouse configuration
 # foces doesn't follow mouse
@@ -187,6 +194,7 @@ focus_follows_mouse no
 # start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+				i3bar_command i3bar -t
         status_command i3status
         position top
         separator_symbol " / "
