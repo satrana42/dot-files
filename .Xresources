@@ -8,3 +8,12 @@ urxvt.boldFont: xft:Noto Sans Mono:pixelsize=13:weight=bold
 urxvt.letterSpace: -1
 !! Larger history limit
 urxvt.saveLines: 0
+
+!! Xautolock settings
+Xautolock.time: 2
+Xautolock.locker: /usr/bin/lock/i3lock -e -c 000000
+Xautolock.killtime: 5
+Xautolock.killer: systemctl suspend
+Xautolock.detectsleep: true
+Xautolock.secure: true
+Xautolock.noclose: true

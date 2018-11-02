@@ -141,13 +141,15 @@ mode $mode_i3_session {
 
 bindsym $mod+grave mode $mode_i3_session
 
+# system lock command
+set $lock_system i3lock -e -c 000000
 # system session management
 set $mode_system_session "system session: [e]xit, [l]ock, [r]eboot, [s]hutdown"
 mode $mode_system_session {
         # exit i3 (logs you out of your X session)
         bindsym e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"; mode "default"
         # lock gnome 
-        bindsym l exec i3lock -e -c 000000; mode "default"
+        bindsym l exec $lock_system; mode "default"
         # restart
         bindsym r exec "i3-nagbar -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot the system? This will end all running processes.' -b 'Yes, reboot' 'systemctl reboot'"; mode "default"
         # shutdown
@@ -204,11 +206,17 @@ bar {
 # set wallpaper
 exec sh ~/.fehbg
 
-# start cerebro
+# switcher
 exec cerebro
 
-# start redshift
+# reduce blue light
 exec redshift-gtk
 
-# start compton
+# window compositor
 exec compton
+
+# autolock screen on inactivity
+exec xautolock
+
+# notification server
+exec dunst

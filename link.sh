@@ -7,7 +7,9 @@ DOT_FILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 USER_HOME_DIR=~
 DOT_FILES=( \
 .bashrc \
+.config/Cerebro/config.json \
 .config/compton.conf \
+.config/dunst/dunstrc \
 .config/fontconfig/fonts.conf \
 .config/i3/config \
 .config/i3status/config \
@@ -26,7 +28,7 @@ DOT_FILES=( \
 )
 
 FORCE_SYMLINKS=0
-if [[ "$1" -eq "-f" || "$1" -eq "--force" ]]; then
+if [[ "$1" = "-f" || "$1" -eq "--force" ]]; then
   echo "Forced symlinks creation enabled"
   FORCE_SYMLINKS=1
 fi
