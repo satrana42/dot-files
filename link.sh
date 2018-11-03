@@ -20,6 +20,7 @@ DOT_FILES=( \
 .gitconfig \
 .gvimrc \
 .inputrc \
+.nord.Xresources \
 .pam_environment \
 .shell_additions.sh \
 .tmux.conf \

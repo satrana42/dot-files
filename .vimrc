@@ -114,3 +114,7 @@ nnoremap <C-w>\| :vsplit<CR>
 
 " current buffer diff
 command DiffOriginal w !diff % -
+
+" clipboard access, needs +clipboard
+noremap <Leader>y "+y
+noremap <Leader>p "+p

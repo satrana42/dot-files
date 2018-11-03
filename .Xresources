@@ -1,13 +1,15 @@
 !! URxvt settings
 !! Appearance
-urxvt.termName: rxvt-unicode
-urxvt.scrollBar: false
+URxvt.termName: rxvt-unicode
+URxvt.scrollBar: false
+URxvt.internalBorder: 0
+URxvt.externalBorder: 0
 !! Font prefferenes
-urxvt.font: xft:Noto Sans Mono:pixelsize=13
-urxvt.boldFont: xft:Noto Sans Mono:pixelsize=13:weight=bold
-urxvt.letterSpace: -1
+URxvt.font: xft:Noto Sans Mono:pixelsize=13
+URxvt.boldFont: xft:Noto Sans Mono:pixelsize=13:weight=bold
+URxvt.letterSpace: -1
 !! Larger history limit
-urxvt.saveLines: 0
+URxvt.saveLines: 0
 
 !! Xautolock settings
 Xautolock.time: 2
