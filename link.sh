@@ -15,9 +15,12 @@ DOT_FILES=( \
 .config/i3status/config \
 .config/locale.conf \
 .config/systemd/user/geoclue-agent.service \
+.config/systemd/user/ssh-agent.service \
 .ctags \
 .gitconfig \
+.gvimrc \
 .inputrc \
+.pam_environment \
 .shell_additions.sh \
 .tmux.conf \
 .vimrc \
