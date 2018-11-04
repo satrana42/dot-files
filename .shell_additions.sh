@@ -5,19 +5,25 @@ if [ -e $CUSTOM_SHELL_ADDITIONS ]; then
 fi
 
 # system stuff
-alias sudo='sudo '
-export VISUAL=vim
-export EDITOR='$VISUAL'
+alias sudo="sudo "
+export VISUAL="vim"
+export EDITOR="$VISUAL"
 
 # fasd (file search)
-eval "$(fasd --init auto)"
-alias v='f -e vim'
+which fasd >/dev/null
+if [ "$?" -eq 0 ]; then
+  eval "$(fasd --init auto)"
+  alias v='f -e vim'
+fi
 
 # fzf (history search)
-case $CURRENT_SHELL in
-  "zsh") [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh;;
-  "bash") [ -f ~/.fzf.bash ] && source ~/.fzf.bash;;
-esac
+# can't use $SHELL as it's default shell not current shell, so we export
+# $CURRENT_SHELL from the corresponding shell rc
+FZF_DIRECTORY="/usr/share/fzf"
+COMPLETION_SCRIPT="${FZF_DIRECTORY}/completion.${CURRENT_SHELL}"
+KEY_BINDINGS_SCRIPT="${FZF_DIRECTORY}/key-bindings.${CURRENT_SHELL}"
+[ -f "$COMPLETION_SCRIPT" ] && source "$COMPLETION_SCRIPT"
+[ -f "$KEY_BINDINGS_SCRIPT" ] && source "$KEY_BINDINGS_SCRIPT"
 
 # xdg config directoru
 export XDG_CONFIG_HOME=~/.config
