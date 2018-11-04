@@ -85,9 +85,6 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 
 " general settings
-" fzf
-set rtp+=~/.fzf
-
 " spaces over tabs
 set tabstop=2 shiftwidth=2 expandtab
 
