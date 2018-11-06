@@ -1,0 +1,3 @@
+" clipboard access, needs +clipboard
+noremap <Leader>y "+y
+noremap <Leader>p "+p

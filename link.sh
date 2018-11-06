@@ -19,6 +19,7 @@ DOT_FILES=( \
 .ctags \
 .gitconfig \
 .gvimrc \
+.ideavimrc \
 .inputrc \
 .nord.Xresources \
 .pam_environment \
