@@ -21,13 +21,15 @@ DOT_FILES=( \
 .gvimrc \
 .ideavimrc \
 .inputrc \
-.nord.Xresources \
 .pam_environment \
 .shell_additions.sh \
 .tmux.conf \
 .vimrc \
 .xinitrc \
 .Xresources \
+.Xresources.d/nord-theme \
+.Xresources.d/rxvt-unicode \
+.Xresources.d/xautolock \
 .zprofile \
 .zshrc \
 )

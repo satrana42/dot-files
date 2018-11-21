@@ -2,8 +2,6 @@
 xrandr --output eDP-1 --mode 2560x1440
 
 X_RESOURCES=~/.Xresources
-X_RESOURCES_THEME=~/.nord.Xresources
-[[ -f "${X_RESOURCES}" ]] && xrdb "${X_RESOURCES}"
-[[ -f "${X_RESOURCES_THEME}" ]] && xrdb -merge "${X_RESOURCES_THEME}"
+[[ -f "${X_RESOURCES}" ]] && xrdb -cpp cpp "${X_RESOURCES}"
 
 exec i3

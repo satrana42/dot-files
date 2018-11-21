@@ -1,21 +1,3 @@
-!! URxvt settings
-!! Appearance
-URxvt.termName: rxvt-unicode
-URxvt.scrollBar: false
-URxvt.internalBorder: 0
-URxvt.externalBorder: 0
-!! Font prefferenes
-URxvt.font: xft:Noto Sans Mono:pixelsize=12
-URxvt.boldFont: xft:Noto Sans Mono:pixelsize=12:weight=bold
-URxvt.letterSpace: -1
-!! Larger history limit
-URxvt.saveLines: 0
-
-!! Xautolock settings
-Xautolock.time: 2
-Xautolock.locker: /usr/bin/lock/i3lock -e -c 000000
-Xautolock.killtime: 5
-Xautolock.killer: systemctl suspend
-Xautolock.detectsleep: true
-Xautolock.secure: true
-Xautolock.noclose: true
+#include ".Xresources.d/nord-theme"
+#include ".Xresources.d/rxvt-unicode"
+#include ".Xresources.d/xautolock"
