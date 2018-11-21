@@ -5,7 +5,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Noto Sans Mono 8
+font pango:Noto Sans Mono 10, FontAwesome 10
 
 # no title bar in split mode
 new_window 1pixel
@@ -126,13 +126,16 @@ smart_gaps on
 smart_borders on
 
 # binding modes
+set $take_screenshot scrot ~/Pictures/screenshots/%Y-%m-%d-%T-screenshot.png
 # i3 session management
-set $mode_i3_session "i3 session: inplace [r]estart, reload [c]onfig"
+set $mode_i3_session "i3 session: inplace [r]estart, reload [c]onfig, take [s]creenshot"
 mode $mode_i3_session {
         # reload the configuration file
         bindsym c reload
         # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
         bindsym r restart
+        # take a screenshot
+        bindsym s exec $take_screenshot; mode "default"
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -199,7 +202,7 @@ bar {
 				i3bar_command i3bar -t
         status_command i3status
         position top
-        separator_symbol " / "
+        separator_symbol ""
 }
 
 # start up apps

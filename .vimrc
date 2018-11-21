@@ -23,13 +23,10 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-" Plugin 'neoclide/coc.nvim'
-" Plugin 'xolox/vim-misc'
-" Plugin 'xolox/vim-easytags'
 
-" if v:version > 704
-"   Plugin 'Valloric/YouCompleteMe'
-" endif
+if v:version > 704
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 call vundle#end()
 filetype plugin indent on
@@ -49,21 +46,15 @@ let g:airline_detect_paste=1
 let g:airline_theme='minimalist'
 
 " nerdtree
-nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>r :NERDTreeTabsToggle<CR>
 
 " syntastic
 let g:syntastic_error_symbol = 'E'
 let g:syntastic_warning_symbol = "W"
 
 " tags
-nmap <silent> <leader>p :TagbarToggle<CR>
+nmap <silent> <leader>t :TagbarToggle<CR>
 let g:tagbar_autoclose=2
-" set tags=./tags
-" let g:easytags_events = ['BufReadPost', 'BufWritePost']
-" let g:easytags_async = 1
-" let g:easytags_dynamic_files = 1
-" let g:easytags_resolve_links = 1
-" let g:easytags_suppress_ctags_warning = 1
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
