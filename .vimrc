@@ -27,10 +27,7 @@ Plugin 'neoclide/coc.nvim'
 " Plugin 'xolox/vim-misc'
 " Plugin 'xolox/vim-easytags'
 Plugin 'rickhowe/diffchar.vim'
-
-if v:version > 704
-  Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on

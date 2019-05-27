@@ -193,20 +193,8 @@ bar {
 }
 
 # start up apps
-# enable natural scrolling
-exec ~/codes/i3-natural-scrolling-and-tap/inverse-scroll.sh
-
-# enable tap to click
-exec ~/codes/i3-natural-scrolling-and-tap/tap-to-click.sh 
-
 # set wallpaper
-exec sh ~/.fehbg
-
-# start cerebro
-exec --no-startup-id cerebro
-
-# start f.lux
-exec --no-startup-id fluxgui
+exec --no-startup-id sh ~/.fehbg
 
 # start network manager applet
 exec --no-startup-id nm-applet
@@ -215,4 +203,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 
 # start compton
-exec compton
+exec --no-startup-id compton
+
+# start gnome
+exec --no-startup-id gnome-flashback
