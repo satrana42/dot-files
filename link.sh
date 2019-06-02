@@ -17,6 +17,7 @@ DOT_FILES=( \
 .config/systemd/user/geoclue-agent.service \
 .config/systemd/user/ssh-agent.service \
 .ctags \
+.dir_colors \
 .gitconfig \
 .gvimrc \
 .ideavimrc \

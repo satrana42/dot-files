@@ -23,10 +23,8 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
-
-if v:version > 704
-  Plugin 'Valloric/YouCompleteMe'
-endif
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -37,13 +35,12 @@ set nocscopeverbose
 
 " plugin settings
 " theme
-colorscheme seoul256
+colorscheme nord
 
 " airline
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_detect_paste=1
-let g:airline_theme='minimalist'
 
 " nerdtree
 nmap <silent> <leader>r :NERDTreeTabsToggle<CR>
