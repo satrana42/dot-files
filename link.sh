@@ -14,6 +14,7 @@ DOT_FILES=( \
 .config/i3/config \
 .config/i3status/config \
 .config/locale.conf \
+.config/rofi/config \
 .config/systemd/user/geoclue-agent.service \
 .config/systemd/user/ssh-agent.service \
 .ctags \
