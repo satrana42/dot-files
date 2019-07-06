@@ -1,3 +1,21 @@
+# ssh agent stuff
+SSH_AGENT_CONF=~/.ssh-agent-conf
+if [[ ! "$SSH_AUTH_SOCK" || ! -f "$SSH_AUTH_SOCK" ]]; then
+  echo "Connecting to ssh-agent"
+  source "$SSH_AGENT_CONF"
+  if [[ ! "$SSH_AGENT_PID" || ! "$(ps -p $SSH_AGENT_PID -o pid=)" ]]; then
+    echo "Starting ssh-agent"
+    ssh-agent > "$SSH_AGENT_CONF"
+    source "$SSH_AGENT_CONF"
+  fi
+fi
+
+SSH_KEY_PATH=~/.ssh/rubrik_rsa
+if [ ! "$(ssh-add -l | grep $SSH_KEY_PATH)" ]; then
+  echo "Adding ssh key to ssh-agent..."
+  ssh-add $SSH_KEY_PATH
+fi
+
 # custom (machine specific) additions
 CUSTOM_SHELL_ADDITIONS=".custom_shell_additions.sh"
 if [ -e $CUSTOM_SHELL_ADDITIONS ]; then
