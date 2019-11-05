@@ -7,32 +7,13 @@ DOT_FILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 USER_HOME_DIR=~
 DOT_FILES=( \
 .bashrc \
-.config/Cerebro/config.json \
-.config/compton.conf \
-.config/dunst/dunstrc \
-.config/fontconfig/fonts.conf \
-.config/i3/config \
-.config/i3status/config \
-.config/locale.conf \
-.config/rofi/config \
-.config/systemd/user/geoclue-agent.service \
-.config/systemd/user/ssh-agent.service \
 .ctags \
-.dir_colors \
 .gitconfig \
-.gvimrc \
 .ideavimrc \
 .inputrc \
-.pam_environment \
 .shell_additions.sh \
 .tmux.conf \
 .vimrc \
-.xinitrc \
-.Xresources \
-.Xresources.d/nord-theme \
-.Xresources.d/rxvt-unicode \
-.Xresources.d/xautolock \
-.zprofile \
 .zshrc \
 )
 
