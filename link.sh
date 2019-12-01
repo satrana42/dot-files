@@ -16,6 +16,7 @@ DOT_FILES=( \
 .ideavimrc \
 .inputrc \
 .shell_additions.sh \
+.spacemacs.d/init.el \
 .tmux.conf \
 .vimrc \
 .zshrc \
@@ -43,6 +44,7 @@ for f in "${DOT_FILES[@]}"; do
       FLAGS="${FLAGS}f"
     fi
 
+    mkdir -p $(dirname "$TARGET_PATH")
 	  ln -s$FLAGS "$SOURCE_PATH" "$TARGET_PATH"
   fi
 done
