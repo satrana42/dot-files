@@ -45,3 +45,7 @@ KEY_BINDINGS_SCRIPT="${FZF_DIRECTORY}/key-bindings.${CURRENT_SHELL}"
 
 # xdg config directoru
 export XDG_CONFIG_HOME=~/.config
+
+if [ "$CURRENT_SHELL" = "zsh" ]; then
+  test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+fi
