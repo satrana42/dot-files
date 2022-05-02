@@ -20,6 +20,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'rickhowe/diffchar.vim'
+Plugin 'rhysd/vim-grammarous'
 
 call vundle#end()
 

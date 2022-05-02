@@ -1,6 +1,3 @@
-[user]
-	email = satwant.rana@rubrik.com
-	name = Satwant Rana
 [diff]
 	tool = vimdiff
 [difftool]

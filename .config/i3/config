@@ -8,7 +8,7 @@ set $mod Mod4
 font pango:DejaVu Sans Mono 8
 
 # no title bar in split mode
-new_window 1pixel
+default_border pixel 1
 
 # use these keys for focus, movement, and resize directions when reaching for
 # the arrows is not convenient
@@ -206,4 +206,4 @@ exec --no-startup-id volumeicon
 exec --no-startup-id compton
 
 # start gnome
-exec --no-startup-id gnome-flashback
+# exec --no-startup-id gnome-flashback
