@@ -1,5 +1,7 @@
+[include]
+  path = custom.gitconfig
 [user]
-	email = satwant.rana@rubrik.com
+	email = satwant@fennel.ai
 	name = Satwant Rana
 [diff]
 	tool = vimdiff
